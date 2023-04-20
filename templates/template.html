@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap" rel="stylesheet">
+    <title>Autenticador de CPF</title>
+</head>
+<body>
+    <h1>Bem-vindo(a) ao autenticador de CPF</h1>
+    <form action="/resultado" method="POST">  
+        <p class="text"> 
+            <strong> Insira somente os números do CPF: </strong>
+            <input id="cpf" class="text" type="text" pattern="[0-9\.]+" name="cpf" minlength="11" maxlength="11" required>
+            <button class="text" type="submit"> Enviar </button>
+        </p>
+    </form>
+
+    {% if cpf_formatado %}
+        
+    <div class="container">
+        <p class="plat">
+            <strong>CPF formatado: {{ cpf_formatado }} </strong> 
+        </p>    
+        <p class="plat">
+            <strong>CPF é válido: {{ cpf_validado }} </strong>     
+        </p>    
+    </div>
+
+     
+    {% endif %}
+
+</body>
+</html>
