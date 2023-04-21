@@ -34,11 +34,20 @@
         <form action="/resultado" method="POST">  
             <p class="text"> 
                 <strong> Insira somente os números do CNPJ: </strong>
-                <input id="cpf" class="text" type="text" pattern="[0-9\.]+" name="cpf" minlength="14" maxlength="14" required>
+                <input id="cnpj" class="text" type="text" pattern="[0-9\.]+" name="cnpj" minlength="14" maxlength="14" required>
                 <button class="text" type="submit"> Enviar </button>
             </p>
         </form>
-
+    {% if cnpj_formatado %}    
+    <div class="container">
+        <p class="plat">
+            <strong>CNPJ formatado: {{ cnpj_formatado }} </strong> 
+        </p>    
+        <p class="plat">
+            <strong>CNPJ é válido: {{ cnpj_validado }} </strong>     
+        </p>    
+    </div>
+    {% endif %}
 
 </body>
 </html>
