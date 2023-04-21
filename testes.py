@@ -42,3 +42,49 @@ def valida_cpf(cpf):
     else: 
         return 'NÃO'
 
+def formata_cnpj(cnpj):
+    parte_01 = cnpj[0:2]
+    parte_02 = cnpj[2:5]
+    parte_03 = cnpj[5:8]
+    parte_04 = cnpj[8:12]
+    parte_05 = cnpj[12:15]
+
+    return f'{parte_01}.{parte_02}.{parte_03}/{parte_04}-{parte_05}'
+
+
+
+def valida_cnpj(cnpj):
+    if len(set(cnpj)) == 1:
+        return 'CNPJ INVÁLIDO'
+    peso = '543298765432'
+    base = cnpj[0:12]
+    soma = 0
+    i = 0
+    for numero in base:
+        soma += int(numero) * int(peso[i])
+        i += 1
+    digito_01 = 11 - (soma % 11)
+
+    if digito_01 >= 10:
+        digito_01 = 0
+
+    peso_2 = '6543298765432'
+    base_2 = (f'{cnpj[0:12]}{digito_01}')
+    soma_2 = 0
+    i_2 = 0
+    for numero in base_2:
+        soma_2 += int(numero) * int(peso_2[i_2])
+        i_2 += 1
+
+    digito_02 = 11 - (soma_2 % 11)
+
+    if digito_02 >= 10:
+        digito_02 = 0
+
+    cnpj_valido = (f'{base_2}{digito_02}')
+    if cnpj == cnpj_valido:
+        return 'CNPJ É VÁLIDO'
+    else:
+        return 'CNPJ É INVÁLIDO'
+
+print(valida_cnpj('1111111111111'))

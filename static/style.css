@@ -35,7 +35,7 @@ h1:hover{
     padding: 1% 5%;
     font-style: italic;
     width: 25%;
-    margin: 7% auto;
+    margin: 2% auto;
     color: black;
     background: linear-gradient(to right, rgb(159, 159, 233), rgb(243, 176, 176));
     box-shadow: 1px 5px 5px rgba(0, 0, 0, 0.3);
@@ -50,7 +50,7 @@ h1:hover{
     border-radius: 30px;
     padding: 1% 2.5%;
     font-style: italic;
-    margin: 0 auto;
+    margin: 1 auto;
     color: black;
     background: linear-gradient(to right, rgb(159, 159, 233), rgb(243, 176, 176));
     box-shadow: 1px 5px 5px rgba(0, 0, 0, 0.3);
