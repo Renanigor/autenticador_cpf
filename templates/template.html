@@ -12,39 +12,56 @@
     <h1>Bem-vindo(a) ao autenticador de CPF/CNPJ</h1>
         <h2 class="text"> Autenticador de CPF </h2>
             <form action="/resultado" method="POST">  
-                <p class="text"> 
-                    <strong> Insira somente os números do CPF: </strong>
-                    <input id="cpf" class="input" type="text" pattern="[0-9\.]+" name="cpf" minlength="11" maxlength="11" required>
-                    <button class="input" type="submit"> Enviar </button>
-                </p>
+                <div class="container-div">
+                    <div class="text"> 
+                        <strong> Insira somente os números do CPF: </strong>
+                        <input id="cpf" class="input" type="text" pattern="[0-9\.]+" name="cpf" minlength="11" maxlength="11" required>
+                        <button class="input" type="submit"> Enviar </button>
+                        <p class="text-without-shadow">
+                            <strong>CPF formatado: {{ cpf_formatado }} </strong> 
+                        </p>    
+                        <p class="text-without-shadow">
+                            <strong>CPF é válido: {{ cpf_validado }} </strong>     
+                        </p>  
+                        
+                    </div>
+                    <p class="text">
+                        <strong> 
+                            CPF é a sigla para Cadastro de Pessoa Física, 
+                            um documento emitido pela Receita Federal do Brasil que identifica os contribuintes brasileiros perante o governo federal. 
+                            CPF é composto por onze dígitos numéricos e é obrigatório para diversas atividades, como abertura de contas bancárias, 
+                            contratação de serviços públicos, realização de compras e muitas outras situações que exigem identificação pessoal.
+                            O CPF é um número único para cada pessoa e é utilizado para fins fiscais e tributários no Brasil.
+                        </strong>
+                    </p>
+                </div>
             </form>   
-    <div class="container">
-        <p class="text-without-shadow">
-            <strong>CPF formatado: {{ cpf_formatado }} </strong> 
-        </p>    
-        <p class="text-without-shadow">
-            <strong>CPF é válido: {{ cpf_validado }} </strong>     
-        </p>    
-    </div>
-    
     <h2 class="text"> Autenticador de CNPJ </h2>
         <form action="/resultado" method="POST">  
-            <p class="text"> 
-                <strong> Insira somente os números do CNPJ: </strong>
-                <input id="cnpj" class="input" type="text" pattern="[0-9\.]+" name="cnpj" minlength="14" maxlength="14" required>
-                <button class="input" type="submit"> Enviar </button>
-
-            </p>
+            <div class="container-div">
+                <div class="text"> 
+                    <strong> Insira somente os números do CNPJ: </strong>
+                    <input id="cnpj" class="input" type="text" pattern="[0-9\.]+" name="cnpj" minlength="14" maxlength="14" required>
+                    <button class="input" type="submit"> Enviar </button>
+                    <p class="text-without-shadow">
+                        <strong>CNPJ formatado: {{ cnpj_formatado }} </strong> 
+                    </p>    
+                    <p class="text-without-shadow">
+                        <strong>CNPJ é válido: {{ cnpj_validado }} </strong>     
+                    </p>  
+                </div>
+                <p class="text">
+                    <strong> 
+                        CNPJ é a sigla para Cadastro Nacional de Pessoa Jurídica, 
+                        um número único atribuído pelo Ministério da Economia para identificar uma pessoa jurídica ou uma empresa.
+                        O CNPJ é composto por 14 dígitos numéricos e é usado para identificar empresas junto ao governo e órgãos públicos,
+                        bem como para fins fiscais e tributários. 
+                        É obrigatório para qualquer empresa que pretenda exercer atividades econômicas
+                        no Brasil e é utilizado para diversas finalidades, como abertura de conta bancária,
+                        emissão de notas fiscais, obtenção de empréstimos e financiamentos, contratação de serviços, 
+                        entre outras situações em que seja necessário identificar uma pessoa jurídica.
+                    </strong>
+            </div>    
         </form>  
-    <div class="container">
-        <p class="text-without-shadow">
-            <strong>CNPJ formatado: {{ cnpj_formatado }} </strong> 
-        </p>    
-        <p class="text-without-shadow">
-            <strong>CNPJ é válido: {{ cnpj_validado }} </strong>     
-        </p>   
-
-    </div>
-
 </body>
 </html>

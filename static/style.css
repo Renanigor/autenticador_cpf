@@ -37,17 +37,15 @@ h1:hover{
     box-shadow: 6px 6px 5px rgb(0, 0, 0, 0.4);
 
 }
-
-.container{
+.container-div{
     display: flex;
-    justify-content: center;
 }
 
 .text-without-shadow{
     border: 2px solid rgb(121, 117, 117);
     padding: 1% 2.5%;
     font-style: italic;
-    margin: 1 auto;
+    margin: 1 1;
     color: black;
     background: linear-gradient(to right, rgb(159, 159, 233), rgb(243, 176, 176));
     box-shadow: 6px 6px 5px rgb(0, 0, 0, 0.4);
