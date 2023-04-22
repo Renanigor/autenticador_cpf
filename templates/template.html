@@ -11,43 +11,40 @@
 <body>
     <h1>Bem-vindo(a) ao autenticador de CPF/CNPJ</h1>
         <h2 class="text"> Autenticador de CPF </h2>
-        <form action="/resultado" method="POST">  
-            <p class="text"> 
-                <strong> Insira somente os números do CPF: </strong>
-                <input id="cpf" class="text" type="text" pattern="[0-9\.]+" name="cpf" minlength="11" maxlength="11" required>
-                <button class="text" type="submit"> Enviar </button>
-            </p>
-        </form>
-
-    {% if cpf_formatado %}    
+            <form action="/resultado" method="POST">  
+                <p class="text"> 
+                    <strong> Insira somente os números do CPF: </strong>
+                    <input id="cpf" class="input" type="text" pattern="[0-9\.]+" name="cpf" minlength="11" maxlength="11" required>
+                    <button class="input" type="submit"> Enviar </button>
+                </p>
+            </form>   
     <div class="container">
-        <p class="plat">
+        <p class="text-without-shadow">
             <strong>CPF formatado: {{ cpf_formatado }} </strong> 
         </p>    
-        <p class="plat">
+        <p class="text-without-shadow">
             <strong>CPF é válido: {{ cpf_validado }} </strong>     
         </p>    
     </div>
-    {% endif %}
     
     <h2 class="text"> Autenticador de CNPJ </h2>
         <form action="/resultado" method="POST">  
             <p class="text"> 
                 <strong> Insira somente os números do CNPJ: </strong>
-                <input id="cnpj" class="text" type="text" pattern="[0-9\.]+" name="cnpj" minlength="14" maxlength="14" required>
-                <button class="text" type="submit"> Enviar </button>
+                <input id="cnpj" class="input" type="text" pattern="[0-9\.]+" name="cnpj" minlength="14" maxlength="14" required>
+                <button class="input" type="submit"> Enviar </button>
+
             </p>
-        </form>
-    {% if cnpj_formatado %}    
+        </form>  
     <div class="container">
-        <p class="plat">
+        <p class="text-without-shadow">
             <strong>CNPJ formatado: {{ cnpj_formatado }} </strong> 
         </p>    
-        <p class="plat">
+        <p class="text-without-shadow">
             <strong>CNPJ é válido: {{ cnpj_validado }} </strong>     
-        </p>    
+        </p>   
+
     </div>
-    {% endif %}
 
 </body>
 </html>

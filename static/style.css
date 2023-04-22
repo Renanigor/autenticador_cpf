@@ -2,24 +2,21 @@ body {
     font-family: 'Montserrat', sans-serif;
     background: linear-gradient(to right, rgb(243, 176, 176), rgb(159, 159, 233))
 }
+
 h1{
     text-align: center;
     border: 2px solid rgb(121, 117, 117);
-    border-radius: 40px;
     padding: 1% 1%;
     background: linear-gradient(to right, rgb(159, 159, 233), rgb(243, 176, 176));
     font-style: italic;
     width: 50%;
     margin: 0 auto;
-    box-shadow: 1px 5px 5px rgba(0, 0, 0, 0.3);
+    box-shadow: 6px 6px 5px rgb(0, 0, 0, 0.4);
 }
 
 h1:hover{
     text-align: center;
-    border: 1px solid rgb(121, 117, 117);
-    border-radius: 40px;
     border: 2px solid rgb(121, 117, 117);
-    border-radius: 40px;
     padding: 1% 1%;
     background: linear-gradient(to right, rgb(243, 176, 176), rgb(159, 159, 233));
     font-style: italic;
@@ -31,28 +28,39 @@ h1:hover{
 .text{
     text-align: center;
     border: 2px solid rgb(121, 117, 117);
-    border-radius: 40px;
     padding: 1% 5%;
     font-style: italic;
     width: 25%;
     margin: 2% auto;
     color: black;
     background: linear-gradient(to right, rgb(159, 159, 233), rgb(243, 176, 176));
-    box-shadow: 1px 5px 5px rgba(0, 0, 0, 0.3);
+    box-shadow: 6px 6px 5px rgb(0, 0, 0, 0.4);
+
 }
+
 .container{
     display: flex;
     justify-content: center;
 }
 
-.plat{
+.text-without-shadow{
     border: 2px solid rgb(121, 117, 117);
-    border-radius: 30px;
     padding: 1% 2.5%;
     font-style: italic;
     margin: 1 auto;
     color: black;
     background: linear-gradient(to right, rgb(159, 159, 233), rgb(243, 176, 176));
-    box-shadow: 1px 5px 5px rgba(0, 0, 0, 0.3);
+    box-shadow: 6px 6px 5px rgb(0, 0, 0, 0.4);
     display: inline-block;
+}
+
+.input{
+    text-align: center;
+    border: 2px solid rgb(121, 117, 117);
+    padding: 1% 5%;
+    font-style: italic;
+    width: 25%;
+    margin: 2% auto;
+    color: black;
+    background: linear-gradient(to right, rgb(159, 159, 233), rgb(243, 176, 176));
 }

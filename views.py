@@ -12,11 +12,11 @@ def resultado():
     cnpj = request.form.get('cnpj')
     
     if cpf or cnpj:
-        cpf_formatado = formata_cpf(cpf) if cpf else None
-        cpf_validado = valida_cpf(cpf) if cpf else None
+        cpf_formatado = formata_cpf(cpf) if cpf else ""
+        cpf_validado = valida_cpf(cpf) if cpf else ""
         
-        cnpj_formatado = formata_cnpj(cnpj) if cnpj else None
-        cnpj_validado = valida_cnpj(cnpj) if cnpj else None
+        cnpj_formatado = formata_cnpj(cnpj) if cnpj else ""
+        cnpj_validado = valida_cnpj(cnpj) if cnpj else "    "
 
 
         return render_template('template.html', cpf_formatado=cpf_formatado, cpf_validado=cpf_validado, cnpj_formatado=cnpj_formatado, cnpj_validado=cnpj_validado)
